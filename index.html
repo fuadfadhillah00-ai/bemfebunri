@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BEM FEB UNRI - Portal Resmi & Service Center</title>
+    <title>BEM FEB UNRI - Kabinet Vista Karya</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; }
-        .bg-unri-blue { background-color: #0d3b66; }
-        .text-unri-blue { color: #0d3b66; }
-        .bg-unri-yellow { background-color: #f4d35e; }
-        .text-unri-yellow { color: #f4d35e; }
-        .border-unri-yellow { border-color: #f4d35e; }
-        .nav-link:hover { color: #f4d35e; }
+        .bg-vista-blue { background-color: #0b3c74; }
+        .text-vista-blue { color: #0b3c74; }
+        .bg-vista-orange { background-color: #f7931e; }
+        .text-vista-orange { color: #f7931e; }
+        .border-vista-orange { border-color: #f7931e; }
+        .gradient-vista { background: linear-gradient(135deg, #0b3c74 0%, #1e5ba8 60%, #f7931e 100%); }
+        .nav-link:hover { color: #f7931e; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
@@ -26,7 +27,7 @@
     <div class="bg-slate-900 text-slate-300 text-xs py-2 px-6">
         <div class="max-w-7xl mx-auto flex justify-between items-center">
             <div>
-                <i class="fa-solid fa-location-dot text-yellow-400 mr-2"></i>Kampus Bina Widya KM. 12.5, Simpang Baru, Pekanbaru, Riau
+                <i class="fa-solid fa-location-dot text-orange-400 mr-2"></i>Kampus Bina Widya KM. 12.5, Simpang Baru, Pekanbaru, Riau
             </div>
             <div class="flex space-x-4">
                 <a href="#" class="hover:text-white"><i class="fa-brands fa-instagram"></i> @bemfebunri</a>
@@ -37,15 +38,17 @@
     </div>
 
     <!-- NAVBAR -->
-    <nav class="bg-unri-blue text-white sticky top-0 z-50 shadow-md">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="bg-vista-blue text-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- LOGO & BRANDING -->
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-unri-blue font-bold text-xl border-2 border-yellow-400">
-                    <i class="fa-solid fa-graduation-cap"></i>
+                <div class="w-12 h-12 bg-white rounded-xl p-1 flex items-center justify-center shadow-md">
+                    <!-- Pastikan file logo disimpan dengan nama logo-vista-karya.jpg di folder yang sama -->
+                    <img src="logo-vista-karya.jpg" alt="Logo Vista Karya" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/100?text=VISTA'">
                 </div>
                 <div>
-                    <h1 class="font-extrabold text-lg leading-none tracking-wide">BEM FEB UNRI</h1>
-                    <p class="text-xs text-yellow-300 font-medium">Kabinet Harapan Rakyat</p>
+                    <h1 class="font-extrabold text-lg leading-none tracking-wide text-white">BEM FEB UNRI</h1>
+                    <p class="text-xs text-orange-400 font-bold tracking-wider mt-0.5">KABINET VISTA KARYA</p>
                 </div>
             </div>
 
@@ -59,96 +62,95 @@
             </div>
 
             <div>
-                <a href="#layanan" class="bg-yellow-400 text-slate-900 hover:bg-yellow-300 font-bold px-4 py-2 rounded-lg text-xs transition duration-200 shadow">
-                    <i class="fa-solid fa-layer-group mr-1"></i> Lihat Layanan
+                <a href="#layanan" class="bg-vista-orange text-white hover:bg-orange-600 font-bold px-4 py-2 rounded-lg text-xs transition duration-200 shadow">
+                    <i class="fa-solid fa-layer-group mr-1"></i> Layanan Terpadu
                 </a>
             </div>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section id="home" class="relative bg-unri-blue text-white py-20 px-6 overflow-hidden">
+    <section id="home" class="relative gradient-vista text-white py-20 px-6 overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-7xl mx-auto relative z-10 flex flex-col md:flex-row items-center justify-between gap-10">
             <div class="md:w-1/2 space-y-6">
-                <span class="bg-yellow-400/20 text-yellow-300 text-xs font-bold px-3 py-1 rounded-full border border-yellow-400/30">
-                    Selamat Datang di Portal Resmi
+                <span class="bg-white/20 text-orange-200 text-xs font-bold px-3 py-1 rounded-full border border-white/30 backdrop-blur-sm">
+                    Portal Resmi BEM FEB UNRI
                 </span>
                 <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
-                    Satu Langkah <span class="text-yellow-400">Melayani</span> & Berdampak Bagi FEB UNRI
+                    Bergerak Bersama <span class="text-orange-400">Mencipta Karya</span> Berkualitas
                 </h1>
-                <p class="text-slate-200 text-sm md:text-base leading-relaxed">
-                    Pusat layanan digital terpadu mahasiswa Fakultas Ekonomi dan Bisnis Universitas Riau. Bebas akses untuk informasi kajian strategis, beasiswa, karir, peminjaman inventaris, dan alur birokrasi kampus.
+                <p class="text-slate-100 text-sm md:text-base leading-relaxed">
+                    Selamat datang di pusat layanan digital terpadu BEM FEB UNRI Kabinet Vista Karya. Pusat informasi kajian strategis, beasiswa, karir, dan sistem peminjaman inventaris terintegrasi.
                 </p>
                 <div class="flex flex-wrap gap-4 pt-2">
-                    <a href="#layanan" class="bg-yellow-400 text-slate-900 hover:bg-yellow-300 font-bold px-6 py-3 rounded-lg text-sm transition">
+                    <a href="#layanan" class="bg-vista-orange text-white hover:bg-orange-600 font-bold px-6 py-3 rounded-lg text-sm transition shadow-lg">
                         Eksplor Layanan
                     </a>
                 </div>
             </div>
+            
+            <!-- SHOWCASE LOGO LARGE -->
             <div class="md:w-1/2 flex justify-center">
-                <div class="bg-white/10 p-6 rounded-2xl border border-white/20 backdrop-blur-md max-w-md w-full">
-                    <div class="flex items-center space-x-4 mb-4">
-                        <div class="p-3 bg-yellow-400 text-slate-900 rounded-xl font-bold text-xl">
-                            <i class="fa-solid fa-layer-group"></i>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-white">Ekosistem Layanan Terpadu</h3>
-                            <p class="text-xs text-slate-300">Portal Informasi & Digitalisasi Kampus</p>
-                        </div>
+                <div class="bg-white/10 p-8 rounded-3xl border border-white/20 backdrop-blur-md max-w-md w-full flex flex-col items-center text-center shadow-2xl">
+                    <div class="w-36 h-36 bg-white rounded-2xl p-3 shadow-inner mb-4">
+                        <img src="logo-vista-karya.jpg" alt="Logo Kabinet Vista Karya" class="w-full h-full object-contain" onerror="this.onerror=null; this.src='https://via.placeholder.com/150?text=VISTA+KARYA'">
                     </div>
-                    <ul class="space-y-3 text-xs text-slate-200">
-                        <li class="flex items-center"><i class="fa-solid fa-check text-yellow-400 mr-2"></i> Rilis Kajian & Isu Kebijakan Publik (Kastrat)</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-yellow-400 mr-2"></i> Portal Beasiswa & Lowongan Magang Aktif</li>
-                        <li class="flex items-center"><i class="fa-solid fa-check text-yellow-400 mr-2"></i> Peminjaman Inventaris Terintegrasi Google Sheet</li>
+                    <h3 class="font-extrabold text-xl text-white">KABINET VISTA KARYA</h3>
+                    <p class="text-xs text-orange-300 font-medium mt-1">BEM FEB Universitas Riau</p>
+                    <div class="w-full border-t border-white/20 my-4"></div>
+                    <ul class="space-y-2 text-xs text-slate-100 text-left w-full">
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-orange-400 mr-2"></i> Akses Informasi Beasiswa & Karir</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-orange-400 mr-2"></i> Digitalisasi Peminjaman Inventaris</li>
+                        <li class="flex items-center"><i class="fa-solid fa-circle-check text-orange-400 mr-2"></i> Publikasi Kajian & Isu Strategis</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 1: GRID FITUR KARTU SAMA -->
+    <!-- SECTION 1: GRID FITUR DAN LAYANAN UTAMA -->
     <section id="layanan" class="py-16 px-6 max-w-7xl mx-auto w-full">
         <div class="text-center max-w-2xl mx-auto mb-12">
-            <span class="text-xs font-bold text-unri-blue uppercase tracking-widest">Layanan Terpadu</span>
-            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Fitur & Service Center Mahasiswa</h2>
+            <span class="text-xs font-bold text-vista-orange uppercase tracking-widest">Layanan Terpadu</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Service Center Mahasiswa</h2>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-vista-orange transition">
                 <div>
-                    <div class="w-12 h-12 bg-purple-100 text-purple-800 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <div class="w-12 h-12 bg-blue-100 text-vista-blue rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
                         <i class="fa-solid fa-newspaper"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Kajian Kastrat</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Rilis artikel, analisis isu perekonomian daerah, dan riset independen.</p>
                 </div>
-                <a href="#portal-dinamis" class="mt-6 inline-flex items-center text-xs font-bold text-unri-blue hover:underline">Lihat Kajian →</a>
+                <a href="#portal-dinamis" class="mt-6 inline-flex items-center text-xs font-bold text-vista-blue hover:underline">Lihat Kajian →</a>
             </div>
 
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-vista-orange transition">
                 <div>
-                    <div class="w-12 h-12 bg-emerald-100 text-emerald-800 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <div class="w-12 h-12 bg-orange-100 text-vista-orange rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
                         <i class="fa-solid fa-briefcase"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Beasiswa & Magang</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Pusat update informasi lowongan magang dan beasiswa aktif.</p>
                 </div>
-                <a href="#portal-dinamis" class="mt-6 inline-flex items-center text-xs font-bold text-unri-blue hover:underline">Cek Lowongan →</a>
+                <a href="#portal-dinamis" class="mt-6 inline-flex items-center text-xs font-bold text-vista-blue hover:underline">Cek Lowongan →</a>
             </div>
 
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-vista-orange transition">
                 <div>
-                    <div class="w-12 h-12 bg-blue-100 text-unri-blue rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
+                    <div class="w-12 h-12 bg-sky-100 text-sky-700 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
                         <i class="fa-solid fa-boxes-packing"></i>
                     </div>
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Peminjaman Inventaris</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Layanan pengajuan pinjam barang ormawa real-time terintegrasi Spreadsheet.</p>
                 </div>
-                <a href="#inventaris" class="mt-6 inline-flex items-center text-xs font-bold text-unri-blue hover:underline">Cek & Pinjam →</a>
+                <a href="#inventaris" class="mt-6 inline-flex items-center text-xs font-bold text-vista-blue hover:underline">Cek & Pinjam →</a>
             </div>
 
-            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-vista-orange transition">
                 <div>
                     <div class="w-12 h-12 bg-amber-100 text-amber-800 rounded-xl flex items-center justify-center text-xl mb-4 font-bold">
                         <i class="fa-solid fa-file-signature"></i>
@@ -156,7 +158,7 @@
                     <h3 class="text-lg font-bold text-slate-900 mb-2">Alur Birokrasi</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Panduan legalitas proposal, perizinan ruang kegiatan, dan surat resmi.</p>
                 </div>
-                <a href="#birokrasi" class="mt-6 inline-flex items-center text-xs font-bold text-unri-blue hover:underline">Baca Panduan →</a>
+                <a href="#birokrasi" class="mt-6 inline-flex items-center text-xs font-bold text-vista-blue hover:underline">Baca Panduan →</a>
             </div>
         </div>
     </section>
@@ -166,10 +168,10 @@
         <div class="max-w-7xl mx-auto">
             <div class="mb-8 flex justify-between items-center">
                 <div>
-                    <span class="text-xs font-bold text-unri-blue uppercase tracking-widest">Informasi Ter-update</span>
+                    <span class="text-xs font-bold text-vista-orange uppercase tracking-widest">Informasi Ter-update</span>
                     <h2 class="text-2xl font-extrabold text-slate-900">Kajian, Beasiswa & Berita Kampus</h2>
                 </div>
-                <button onclick="fetchPortalData()" class="text-xs text-unri-blue font-bold hover:underline">
+                <button onclick="fetchPortalData()" class="text-xs text-vista-blue font-bold hover:underline">
                     <i class="fa-solid fa-rotate mr-1"></i> Refresh Portal
                 </button>
             </div>
@@ -186,7 +188,7 @@
     <section id="inventaris" class="py-16 px-6 max-w-7xl mx-auto w-full border-t border-slate-200">
         <div class="flex flex-col md:flex-row md:items-center justify-between mb-8 gap-4">
             <div>
-                <span class="text-xs font-bold text-unri-blue uppercase tracking-widest">Modul Layanan</span>
+                <span class="text-xs font-bold text-vista-orange uppercase tracking-widest">Modul Layanan</span>
                 <h2 class="text-2xl font-extrabold text-slate-900">Jadwal & Pengajuan Inventaris</h2>
             </div>
             <div class="inline-flex items-center text-xs font-medium bg-emerald-100 text-emerald-800 px-3 py-1.5 rounded-lg border border-emerald-200">
@@ -195,8 +197,8 @@
         </div>
 
         <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden mb-8">
-            <div class="bg-slate-900 text-white px-6 py-3 flex justify-between items-center text-xs font-bold">
-                <span><i class="fa-solid fa-list-check text-yellow-400 mr-2"></i> Status Peminjaman Terkini</span>
+            <div class="bg-vista-blue text-white px-6 py-3 flex justify-between items-center text-xs font-bold">
+                <span><i class="fa-solid fa-list-check text-orange-400 mr-2"></i> Status Peminjaman Terkini</span>
                 <button onclick="fetchInventorySchedule()" class="text-slate-300 hover:text-white font-normal underline">
                     <i class="fa-solid fa-rotate mr-1"></i> Refresh Data
                 </button>
@@ -227,20 +229,20 @@
         <!-- FORM PENGAJUAN -->
         <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6">
             <h3 class="text-lg font-bold text-slate-900 mb-4 flex items-center">
-                <i class="fa-solid fa-pen-to-square text-unri-blue mr-2"></i> Form Permohonan Pinjam Inventaris
+                <i class="fa-solid fa-pen-to-square text-vista-blue mr-2"></i> Form Permohonan Pinjam Inventaris
             </h3>
             <form id="loanForm" class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Nama Pemohon</label>
-                    <input type="text" required placeholder="Nama Lengkap" class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-unri-blue">
+                    <input type="text" required placeholder="Nama Lengkap" class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-vista-blue">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Ormawa / NIM</label>
-                    <input type="text" required placeholder="Contoh: HIMA Manajemen" class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-unri-blue">
+                    <input type="text" required placeholder="Contoh: HIMA Manajemen" class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-vista-blue">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Pilih Barang</label>
-                    <select required class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-unri-blue">
+                    <select required class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-vista-blue">
                         <option value="">-- Pilih --</option>
                         <option value="Proyektor Epson EB-X400">Proyektor Epson EB-X400</option>
                         <option value="Sound System Portable + 2 Mic">Sound System Portable + 2 Mic</option>
@@ -250,18 +252,18 @@
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Jumlah</label>
-                    <input type="number" min="1" required placeholder="1" class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-unri-blue">
+                    <input type="number" min="1" required placeholder="1" class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-vista-blue">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Tgl & Jam Pinjam</label>
-                    <input type="datetime-local" required class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-unri-blue">
+                    <input type="datetime-local" required class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-vista-blue">
                 </div>
                 <div>
                     <label class="block text-xs font-bold text-slate-700 mb-1">Tgl & Jam Kembali</label>
-                    <input type="datetime-local" required class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-unri-blue">
+                    <input type="datetime-local" required class="w-full px-3 py-2 text-xs rounded border border-slate-300 focus:outline-none focus:ring-1 focus:ring-vista-blue">
                 </div>
                 <div class="md:col-span-3 flex justify-end pt-2">
-                    <button type="submit" class="bg-unri-blue text-white hover:bg-slate-800 font-bold px-6 py-2 rounded text-xs transition flex items-center shadow">
+                    <button type="submit" class="bg-vista-blue text-white hover:bg-slate-800 font-bold px-6 py-2 rounded text-xs transition flex items-center shadow">
                         <i class="fa-solid fa-paper-plane mr-2"></i> Submit ke Spreadsheet
                     </button>
                 </div>
@@ -273,27 +275,27 @@
     <section id="birokrasi" class="py-16 bg-slate-100 px-6 border-t border-slate-200">
         <div class="max-w-7xl mx-auto">
             <div class="mb-8">
-                <span class="text-xs font-bold text-unri-blue uppercase tracking-widest">Modul Layanan</span>
+                <span class="text-xs font-bold text-vista-orange uppercase tracking-widest">Modul Layanan</span>
                 <h2 class="text-2xl font-extrabold text-slate-900">Alur Birokrasi & Legalitas Kegiatan</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
                 <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                    <span class="text-xs font-bold text-unri-blue bg-blue-100 px-2.5 py-1 rounded-full mb-3 inline-block">Langkah 1</span>
+                    <span class="text-xs font-bold text-vista-blue bg-blue-100 px-2.5 py-1 rounded-full mb-3 inline-block">Langkah 1</span>
                     <h3 class="font-bold text-slate-900 text-sm mb-1">Penyusunan Proposal</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Penyusunan proposal kegiatan sesuai standar format Dekanat FEB UNRI.</p>
                 </div>
                 <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                    <span class="text-xs font-bold text-unri-blue bg-blue-100 px-2.5 py-1 rounded-full mb-3 inline-block">Langkah 2</span>
+                    <span class="text-xs font-bold text-vista-blue bg-blue-100 px-2.5 py-1 rounded-full mb-3 inline-block">Langkah 2</span>
                     <h3 class="font-bold text-slate-900 text-sm mb-1">Pengesahan BEM</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Pengajuan TTD / persetujuan dari Gubernur Mahasiswa BEM FEB UNRI.</p>
                 </div>
                 <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                    <span class="text-xs font-bold text-unri-blue bg-blue-100 px-2.5 py-1 rounded-full mb-3 inline-block">Langkah 3</span>
+                    <span class="text-xs font-bold text-vista-blue bg-blue-100 px-2.5 py-1 rounded-full mb-3 inline-block">Langkah 3</span>
                     <h3 class="font-bold text-slate-900 text-sm mb-1">Verifikasi WD III</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Penyerahan ke Wakil Dekan III Bidang Kemahasiswaan untuk izin pelaksanaan.</p>
                 </div>
                 <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
-                    <span class="text-xs font-bold text-unri-blue bg-blue-100 px-2.5 py-1 rounded-full mb-3 inline-block">Langkah 4</span>
+                    <span class="text-xs font-bold text-vista-blue bg-blue-100 px-2.5 py-1 rounded-full mb-3 inline-block">Langkah 4</span>
                     <h3 class="font-bold text-slate-900 text-sm mb-1">Izin Tempat & Fasilitas</h3>
                     <p class="text-xs text-slate-600 leading-relaxed">Melampirkan SK Izin WD III pada formulir peminjaman tempat & fasilitas kampus.</p>
                 </div>
@@ -304,13 +306,12 @@
     <!-- FOOTER -->
     <footer class="bg-slate-950 text-slate-400 py-10 px-6 mt-auto">
         <div class="max-w-7xl mx-auto text-center text-xs text-slate-500">
-            © 2026 BEM FEB UNRI - Kabinet Harapan Rakyat. Powered by Google Apps Script Engine.
+            © 2026 BEM FEB UNRI - Kabinet Vista Karya. All rights reserved.
         </div>
     </footer>
 
     <!-- SCRIPT CLIENT-SIDE (JSONP) -->
     <script>
-        // GANTI DENGAN URL WEB APP DEPLOYMENT ANDA
         const API_URL = "https://script.google.com/macros/s/AKfycbzTKei-C4GONlf-cVFttPWDu6a5tiYhOXI-hIT4mFv3rfr7i--1-seKZeIaKcT1NyzT/exec";
 
         // 1. MEMUAT DATA PORTAL (DARI TAB Portal_Data)
@@ -328,10 +329,10 @@
                         const detailUrl = `detail.html?id=${pageId}`;
 
                         container.innerHTML += `
-                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-unri-blue transition">
+                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-vista-orange transition">
                                 <div>
                                     <div class="flex justify-between items-center mb-3">
-                                        <span class="bg-blue-100 text-blue-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">${item["Kategori"] || 'Informasi'}</span>
+                                        <span class="bg-orange-100 text-orange-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">${item["Kategori"] || 'Informasi'}</span>
                                         <span class="text-[11px] text-slate-400">${item["Tanggal"] ? new Date(item["Tanggal"]).toLocaleDateString('id-ID') : ''}</span>
                                     </div>
                                     <h3 class="font-extrabold text-slate-800 text-base mb-2 leading-snug line-clamp-2">${item["Judul / Headline"] || 'Tanpa Judul'}</h3>
@@ -339,7 +340,7 @@
                                 </div>
                                 <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
                                     <span class="text-[11px] text-slate-400"><i class="fa-regular fa-user mr-1"></i> ${item["Penulis / Sumber"] || 'Admin'}</span>
-                                    <a href="${detailUrl}" class="text-unri-blue font-bold text-xs hover:underline flex items-center">
+                                    <a href="${detailUrl}" class="text-vista-blue font-bold text-xs hover:underline flex items-center">
                                         Baca Selengkapnya <i class="fa-solid fa-arrow-right ml-1"></i>
                                     </a>
                                 </div>
@@ -355,7 +356,7 @@
             document.body.appendChild(script);
         }
 
-        // 2. MEMUAT DATA INVENTARIS (DARI TAB Inventaris KARENA MEMAKAI type=inventaris)
+        // 2. MEMUAT DATA INVENTARIS
         function fetchInventorySchedule() {
             const tableBody = document.getElementById("inventory-table-body");
             const callbackName = "handleInventory_" + Math.round(Math.random() * 100000);
