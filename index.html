@@ -162,7 +162,7 @@
         </div>
     </section>
 
-    <!-- SECTION 2: PORTAL DINAMIS DARI TAB Portal_Data -->
+    <!-- SECTION 2: PORTAL DINAMIS DARI TAB Portal_Data (DENGAN PREVIEW GAMBAR) -->
     <section id="portal-dinamis" class="py-16 bg-slate-100 px-6 border-t border-slate-200">
         <div class="max-w-7xl mx-auto">
             <div class="mb-8 flex justify-between items-center">
@@ -313,7 +313,7 @@
     <script>
         const API_URL = "https://script.google.com/macros/s/AKfycbzTKei-C4GONlf-cVFttPWDu6a5tiYhOXI-hIT4mFv3rfr7i--1-seKZeIaKcT1NyzT/exec";
 
-        // 1. MEMUAT DATA PORTAL (DARI TAB Portal_Data)
+        // 1. MEMUAT DATA PORTAL (DARI TAB Portal_Data) - DENGAN DUKUNGAN PREVIEW GAMBAR
         function fetchPortalData() {
             const container = document.getElementById("portal-cards-container");
             const callbackName = "handlePortal_" + Math.round(Math.random() * 100000);
@@ -326,22 +326,33 @@
                     data.forEach(item => {
                         const pageId = item["ID"] || "";
                         const detailUrl = `detail.html?id=${pageId}`;
+                        const imageUrl = item["Link Gambar / Banner"] || "";
+
+                        // Buat elemen gambar jika URL gambar diisi di Spreadsheet
+                        const imageHtml = (imageUrl && imageUrl.trim() !== "" && imageUrl.trim() !== "-") 
+                            ? `<div class="w-full h-44 overflow-hidden rounded-t-xl bg-slate-100">
+                                 <img src="${imageUrl}" alt="${item["Judul / Headline"] || 'Banner'}" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.parentElement.remove();">
+                               </div>` 
+                            : '';
 
                         container.innerHTML += `
-                            <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between hover:border-vista-orange transition">
-                                <div>
-                                    <div class="flex justify-between items-center mb-3">
-                                        <span class="bg-orange-100 text-orange-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">${item["Kategori"] || 'Informasi'}</span>
-                                        <span class="text-[11px] text-slate-400">${item["Tanggal"] ? new Date(item["Tanggal"]).toLocaleDateString('id-ID') : ''}</span>
+                            <div class="bg-white rounded-xl border border-slate-200 shadow-sm flex flex-col justify-between overflow-hidden hover:border-vista-orange transition">
+                                ${imageHtml}
+                                <div class="p-6 flex flex-col justify-between flex-grow">
+                                    <div>
+                                        <div class="flex justify-between items-center mb-3">
+                                            <span class="bg-orange-100 text-orange-800 text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">${item["Kategori"] || 'Informasi'}</span>
+                                            <span class="text-[11px] text-slate-400">${item["Tanggal"] ? new Date(item["Tanggal"]).toLocaleDateString('id-ID') : ''}</span>
+                                        </div>
+                                        <h3 class="font-extrabold text-slate-800 text-base mb-2 leading-snug line-clamp-2">${item["Judul / Headline"] || 'Tanpa Judul'}</h3>
+                                        <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">${item["Deskripsi Singkat"] || ''}</p>
                                     </div>
-                                    <h3 class="font-extrabold text-slate-800 text-base mb-2 leading-snug line-clamp-2">${item["Judul / Headline"] || 'Tanpa Judul'}</h3>
-                                    <p class="text-slate-600 text-xs leading-relaxed line-clamp-3 mb-4">${item["Deskripsi Singkat"] || ''}</p>
-                                </div>
-                                <div class="pt-3 border-t border-slate-100 flex justify-between items-center">
-                                    <span class="text-[11px] text-slate-400"><i class="fa-regular fa-user mr-1"></i> ${item["Penulis / Sumber"] || 'Admin'}</span>
-                                    <a href="${detailUrl}" class="text-vista-blue font-bold text-xs hover:underline flex items-center">
-                                        Baca Selengkapnya <i class="fa-solid fa-arrow-right ml-1"></i>
-                                    </a>
+                                    <div class="pt-3 border-t border-slate-100 flex justify-between items-center mt-auto">
+                                        <span class="text-[11px] text-slate-400"><i class="fa-regular fa-user mr-1"></i> ${item["Penulis / Sumber"] || 'Admin'}</span>
+                                        <a href="${detailUrl}" class="text-vista-blue font-bold text-xs hover:underline flex items-center">
+                                            Baca Selengkapnya <i class="fa-solid fa-arrow-right ml-1"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         `;
